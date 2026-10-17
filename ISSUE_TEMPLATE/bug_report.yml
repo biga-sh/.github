@@ -1,0 +1,48 @@
+
+name: Bug report
+description: Report a reproducible problem with biga
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove sensitive information before submitting.
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      placeholder: cli, server, website, or docker
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start a session
+        2. Change a file
+        3. Observe the result
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, CLI version, browser
+    validations:
+      required: false
